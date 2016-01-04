@@ -37,7 +37,8 @@ myCollection.push({
   "sayHello": () => "Hello"
 });
 
-console.log(myCollection.another);
+console.log(myCollection.get.name);
+console.log(myCollection.get.age);
 
 // mycollection.filterBy.thisProp.largerthan(scopedValue);
 // mycollection.filterBy.fn(); //copout

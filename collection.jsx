@@ -1,17 +1,19 @@
 export default function coll(ObjModel) {
   let base = [];
 
-  // Get all of the base object properties
   let properties = Object.keys(ObjModel);
+  let getterObject = {};
  
   properties.forEach(function(propName, i){
-    
-    Object.defineProperty(base, propName.toString(), {
+    Object.defineProperty(getterObject, propName.toString(), {
       get: function () {
-        return coll(this.map( (val) => val[propName] ));
+        return base.map( (val) => val[propName] );
       }
     })
-   
+  });
+
+  Object.defineProperty(base, "get", {
+    get: () => getterObject
   });
 
   return base;
