@@ -4,6 +4,9 @@ extremely in a prototype stage
 ## Goal
 The goal of this library is to make collection manipulation way more expresive and less error prone.
 
+## building and running
+`npm run build`
+`node index.js`
 
 ## Example 
 Given the array
