@@ -11,7 +11,7 @@ The goal of this library is to make collection manipulation way more expresive a
 ## Example 
 Given the array
 
-```
+```json
 var collection = [
   {
     "name": "beto",
@@ -38,9 +38,11 @@ var collection = [
 ```
 collection.extract.age 
 // [35, undefined, 20, 19]
-
+```
+```js
 collection.filterBy.age;
-/*
+```
+```json
 [
   {
     "name": "beto",
@@ -58,10 +60,12 @@ collection.filterBy.age;
     "type": "teacher",
   }
 ]
-*/
+```
 
+```js
 collection.filterBy.age.greaterThan(19); 
-/* outputs
+```
+```json
 [{
     "name": "beto",
     "age": 35,
@@ -72,16 +76,16 @@ collection.filterBy.age.greaterThan(19);
     "age": 20,
     "type": "teacher",
   }]
-*/
-
+```
+```js
 collection.filterBy.type.equal("student");
-/* outputs
+```
+```json
 [{
     "name": "beto",
     "age": 35,
     "type": "student",
   }]
-*/
 ```
 
 ### license
